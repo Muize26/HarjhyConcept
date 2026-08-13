@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HarjhyConcept | Where Creativity Meets Code</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        main section[id] {
+            scroll-margin-top: 104px;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[var(--bg)] text-white antialiased">
+    <header class="fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-8">
+        <nav id="main-nav" class="glass-nav mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-3 transition-all duration-300 sm:px-6 lg:px-8" aria-label="Primary navigation">
+            <a href="#home" class="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070707]" aria-label="HarjhyConcept home">
+                <img src="./assets/images/logo.png" alt="HarjhyConcept logo" class="h-14 w-auto object-contain" />
+                <span class="flex flex-col leading-none">
+                    <span class="font-['Space_Grotesk'] text-lg font-semibold tracking-tight">HarjhyConcept</span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-zinc-400">Creative Developer <br>Where
+                        Creativity Meets Code.</br>
+                    </span>
+                </span>
+            </a>
+
+            <div class="hidden flex-1 items-center justify-center lg:flex">
+                <ul class="flex items-center gap-8">
+                    <li><a class="nav-link" href="#home" data-nav-link="home">Home</a></li>
+                    <li><a class="nav-link" href="#about" data-nav-link="about">About</a></li>
+                    <li><a class="nav-link" href="#services" data-nav-link="services">Services</a></li>
+                    <li><a class="nav-link" href="#skills" data-nav-link="skills">Skills</a></li>
+                    <li><a class="nav-link" href="#projects" data-nav-link="projects">Projects</a></li>
+                    <li><a class="nav-link" href="#contact" data-nav-link="contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="hidden lg:flex">
+                <a href="#contact" class="rounded-full bg-gradient-to-r from-violet-600 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-[0_0_25px_rgba(124,58,237,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070707]">
+                    Let's Talk
+                </a>
+            </div>
+
+            <button id="nav-toggle" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070707] lg:hidden"
+                type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                <span id="nav-icon" class="flex flex-col gap-1.5">
+                    <span class="h-0.5 w-5 rounded-full bg-white transition-all duration-300"></span>
+                    <span class="h-0.5 w-5 rounded-full bg-white transition-all duration-300"></span>
+                    <span class="h-0.5 w-5 rounded-full bg-white transition-all duration-300"></span>
+                </span>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="pointer-events-none fixed inset-x-0 top-24 z-40 mx-4 mt-3 flex h-[calc(100vh-6rem)] flex-col items-center justify-center gap-7 rounded-[32px] border border-white/10 bg-black/90 px-6 py-10 opacity-0 shadow-2xl shadow-black/50 backdrop-blur-2xl transition-all duration-500 lg:hidden"
+            aria-label="Mobile navigation">
+            <a class="mobile-nav-link" href="#home" data-nav-link="home" data-mobile-link>Home</a>
+            <a class="mobile-nav-link" href="#about" data-nav-link="about" data-mobile-link>About</a>
+            <a class="mobile-nav-link" href="#services" data-nav-link="services" data-mobile-link>Services</a>
+            <a class="mobile-nav-link" href="#skills" data-nav-link="skills" data-mobile-link>Skills</a>
+            <a class="mobile-nav-link" href="#projects" data-nav-link="projects" data-mobile-link>Projects</a>
+            <a class="mobile-nav-link" href="#contact" data-nav-link="contact" data-mobile-link>Contact</a>
+            <a href="#contact" class="rounded-full bg-gradient-to-r from-violet-600 to-orange-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:shadow-[0_0_25px_rgba(124,58,237,0.35)]">Let's
+                Talk</a>
+        </div>
+    </header>
+
+    <main class="pt-28">
+        <section id="home" class="relative mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24 sm:px-8 lg:px-12">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="hero-grid absolute inset-0 opacity-40"></div>
+                <div class="absolute left-[-8rem] top-20 h-72 w-72 rounded-full bg-violet-600/20 blur-3xl"></div>
+                <div class="absolute bottom-10 right-[-4rem] h-80 w-80 rounded-full bg-orange-500/15 blur-3xl"></div>
+            </div>
+
+            <div class="relative grid w-full items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+                <div class="max-w-3xl space-y-8">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-zinc-300 backdrop-blur-xl">
+                        <span class="inline-block h-2.5 w-2.5 rounded-full bg-emerald-400"></span> Available for Freelance
+                    </div>
+
+                    <div class="space-y-5">
+                        <h1 class="max-w-3xl text-4xl font-semibold leading-[0.95] text-white sm:text-5xl lg:text-7xl" style="font-family: 'Space Grotesk', sans-serif;">
+                            Where Creativity<br />Meets Code.
+                        </h1>
+                        <p class="max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
+                            Hi, I'm HarjhyConcept — a creative developer with over 5 years of design experience and a Computer Science background. I combine branding, frontend development, and problem-solving to create digital experiences that are both visually compelling and technically
+                            sound.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070707]">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070707]">
+                            Let's Talk
+                        </a>
+                    </div>
+
+                    <div class="grid gap-4 pt-2 sm:grid-cols-3">
+                        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-xl">
+                            <p class="text-sm font-semibold text-white">5+ Years</p>
+                            <p class="mt-1 text-sm text-zinc-400">Design Experience</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-xl">
+                            <p class="text-sm font-semibold text-white">Frontend</p>
+                            <p class="mt-1 text-sm text-zinc-400">Modern Web Development</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-xl">
+                            <p class="text-sm font-semibold text-white">Computer Science</p>
+                            <p class="mt-1 text-sm text-zinc-400">B.Sc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mx-auto flex w-full max-w-xl items-center justify-center">
+                    <div id="identity-dashboard" class="dashboard-shell relative h-[600px] w-full max-w-[540px] rounded-[36px] border border-white/10 bg-[rgba(17,17,17,0.78)] p-8 shadow-[0_30px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
+                        <div class="absolute inset-0 rounded-[36px] border border-white/10"></div>
+                        <div class="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br from-white/10 via-transparent to-white/5 p-6">
+                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.16),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(249,115,22,0.14),transparent_50%)]">
+                            </div>
+
+                            <img src="./assets/images/logo.png" alt="HarjhyConcept logo" class="dashboard-logo pointer-events-none absolute left-1/2 top-1/2 z-0 h-auto w-[240px] -translate-x-1/2 -translate-y-1/2 opacity-[0.09]" />
+
+                            <div class="relative z-10 grid flex-1 grid-cols-2 gap-4">
+                                <div class="dashboard-card flex flex-col gap-3 rounded-[24px] border border-white/10 bg-white/10 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-semibold text-white">Brand Identity</p>
+                                        <span class="text-[10px] uppercase tracking-[0.3em] text-zinc-400">Core</span>
+                                    </div>
+                                    <p class="text-sm leading-6 text-zinc-400">Visual strategy, positioning, and premium brand systems.</p>
+                                </div>
+
+                                <div class="dashboard-card flex flex-col gap-3 rounded-[24px] border border-white/10 bg-white/10 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-semibold text-white">Frontend Development</p>
+                                        <span class="text-[10px] uppercase tracking-[0.3em] text-zinc-400">Build</span>
+                                    </div>
+                                    <p class="text-sm leading-6 text-zinc-400">Responsive interfaces with performance-minded engineering.</p>
+                                </div>
+
+                                <div class="dashboard-card flex flex-col gap-3 rounded-[24px] border border-white/10 bg-white/10 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-semibold text-white">AI Projects</p>
+                                        <span class="text-[10px] uppercase tracking-[0.3em] text-zinc-400">Explore</span>
+                                    </div>
+                                    <p class="text-sm leading-6 text-zinc-400">Concepts shaped through thoughtful systems and product thinking.</p>
+                                </div>
+
+                                <div class="dashboard-card flex flex-col gap-3 rounded-[24px] border border-white/10 bg-white/10 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-sm font-semibold text-white">Computer Science</p>
+                                        <span class="text-[10px] uppercase tracking-[0.3em] text-zinc-400">Logic</span>
+                                    </div>
+                                    <p class="text-sm leading-6 text-zinc-400">A strong technical foundation that supports elegant execution.</p>
+                                </div>
+                            </div>
+
+                            <div class="relative z-10 mt-5 flex flex-col gap-3 rounded-[24px] border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
+                                <div class="flex flex-wrap justify-center gap-2">
+                                    <span class="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-xl">HTML</span>
+                                    <span class="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-xl">CSS</span>
+                                    <span class="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-xl">JavaScript</span>
+                                    <span class="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-xl">React</span>
+                                    <span class="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-xl">Tailwind</span>
+                                    <span class="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-xl">CorelDRAW</span>
+                                    <span class="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-xl">Canva</span>
+                                    <span class="rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-300 backdrop-blur-xl">Git</span>
+                                </div>
+                            </div>
+
+                            <div class="relative z-10 mt-4 rounded-[20px] border border-white/10 bg-[rgba(10,10,10,0.76)] p-3 backdrop-blur-xl">
+                                <div class="flex items-center justify-between gap-3">
+                                    <div>
+                                        <p class="text-[10px] uppercase tracking-[0.3em] text-zinc-500">Currently Building
+                                        </p>
+                                        <p class="mt-1 text-sm font-semibold text-white">HarjhyConcept Portfolio</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-[10px] uppercase tracking-[0.3em] text-zinc-500">Progress</p>
+                                        <p class="mt-1 text-sm font-semibold text-white">80%</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/10">
+                                    <div class="h-full w-[80%] rounded-full bg-gradient-to-r from-violet-500 to-orange-500">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+                <a href="#about" class="flex flex-col items-center gap-2 text-xs uppercase tracking-[0.35em] text-zinc-500 transition-colors duration-300 hover:text-white" aria-label="Scroll to about section">
+                    <span>Scroll</span>
+                    <span class="h-7 w-[1px] animate-pulse bg-zinc-500"></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="relative mx-auto max-w-7xl scroll-mt-28 px-6 py-24 sm:px-8 lg:px-12">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="hero-grid absolute inset-0 opacity-25"></div>
+                <div class="absolute left-[-4rem] top-12 h-48 w-48 rounded-full bg-violet-600/15 blur-3xl"></div>
+                <div class="absolute bottom-0 right-[-3rem] h-56 w-56 rounded-full bg-orange-500/10 blur-3xl"></div>
+            </div>
+
+            <div class="relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+                <div class="about-content space-y-8">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium uppercase tracking-[0.3em] text-zinc-300 backdrop-blur-xl">
+                        About Me
+                    </div>
+
+                    <div class="space-y-5">
+                        <h2 class="max-w-2xl text-4xl font-semibold leading-[0.95] text-white sm:text-5xl lg:text-6xl" style="font-family: 'Space Grotesk', sans-serif;">
+                            Designing Brands.<br />Building Experiences.<br />Solving Problems.
+                        </h2>
+                        <p class="max-w-2xl text-lg leading-8 text-zinc-400">
+                            My journey began in graphic design, where I learned how to shape visual stories with clarity and intention. Over time, that passion evolved into frontend development, where I discovered how to turn thoughtful design into practical, high-performing digital
+                            experiences.
+                        </p>
+                        <p class="max-w-2xl text-lg leading-8 text-zinc-400">
+                            As a Computer Science graduate, I bring a strong technical foundation to every project. I combine creativity with structured problem-solving to build interfaces that feel elegant, intuitive, and rooted in purpose.
+                        </p>
+                        <p class="max-w-2xl text-lg leading-8 text-zinc-400">
+                            I believe great digital products are more than visuals; they are experiences that solve real needs and leave lasting impressions. That balance of artistry and logic is what defines my work.
+                        </p>
+                    </div>
+
+                    <div class="rounded-[28px] border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-[0_20px_70px_rgba(0,0,0,0.22)]">
+                        <p class="text-sm uppercase tracking-[0.3em] text-violet-300">Mission</p>
+                        <p class="mt-3 text-lg leading-8 text-zinc-200">
+                            My mission is to bridge creativity and technology by creating digital experiences that inspire people, solve problems, and help brands grow.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-content space-y-6">
+                    <div class="rounded-[32px] border border-white/10 bg-[rgba(17,17,17,0.78)] p-7 shadow-[0_20px_70px_rgba(0,0,0,0.28)] backdrop-blur-2xl">
+                        <div class="flex items-center justify-center">
+                            <img src="./assets/images/logo.png" alt="HarjhyConcept logo" class="h-16 w-auto object-contain" />
+                        </div>
+                        <div class="mt-6 space-y-3 text-center">
+                            <h3 class="text-2xl font-semibold text-white" style="font-family: 'Space Grotesk', sans-serif;">HarjhyConcept</h3>
+                            <p class="text-sm uppercase tracking-[0.35em] text-violet-300">Creative Developer</p>
+                            <div class="mt-5 space-y-2 text-sm text-zinc-400">
+                                <p>Frontend Developer</p>
+                                <p>Brand Identity and Graphic Designer</p>
+                                <p>Digital Creative & AI Productivity Specialist</p>
+                                <p>Computer Science Graduate</p>
+                                <p>📍 Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div class="stat-card rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-xl shadow-[0_16px_45px_rgba(0,0,0,0.2)]">
+                            <p class="stat-value text-3xl font-semibold text-white">5+</p>
+                            <p class="mt-2 text-sm uppercase tracking-[0.25em] text-zinc-400">Years Experience</p>
+                        </div>
+                        <div class="stat-card rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-xl shadow-[0_16px_45px_rgba(0,0,0,0.2)]">
+                            <p class="stat-value text-3xl font-semibold text-white">25+</p>
+                            <p class="mt-2 text-sm uppercase tracking-[0.25em] text-zinc-400">Completed Designs</p>
+                        </div>
+                        <div class="stat-card rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-xl shadow-[0_16px_45px_rgba(0,0,0,0.2)]">
+                            <p class="stat-value text-3xl font-semibold text-white">4+</p>
+                            <p class="mt-2 text-sm uppercase tracking-[0.25em] text-zinc-400">Featured Projects</p>
+                        </div>
+                        <div class="stat-card rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-xl shadow-[0_16px_45px_rgba(0,0,0,0.2)]">
+                            <p class="stat-value text-3xl font-semibold text-white">∞</p>
+                            <p class="mt-2 text-sm uppercase tracking-[0.25em] text-zinc-400">Always Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="relative mx-auto max-w-7xl scroll-mt-28 px-6 py-24 sm:px-8 lg:px-12">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="hero-grid absolute inset-0 opacity-20"></div>
+                <div class="absolute left-[-3rem] top-10 h-44 w-44 rounded-full bg-violet-600/12 blur-3xl"></div>
+                <div class="absolute right-[-2rem] bottom-10 h-56 w-56 rounded-full bg-orange-500/12 blur-3xl"></div>
+            </div>
+
+            <div class="relative rounded-[32px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-10 backdrop-blur-xl shadow-[0_35px_100px_rgba(0,0,0,0.3)]">
+                <div class="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="space-y-3">
+                        <p class="text-sm uppercase tracking-[0.35em] text-violet-400">Services</p>
+                        <h2 class="text-4xl font-semibold leading-tight text-white sm:text-5xl">Premium digital experiences built with brand, design, and modern web craftsmanship.</h2>
+                    </div>
+                    <a href="#contact" class="services-content inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-orange-500 px-10 py-1 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(249,115,22,0.35)]">Book
+                        a Strategy Call</a>
+                </div>
+
+                <div class="grid gap-6 lg:grid-cols-2">
+                    <article class="service-card services-content rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl shadow-[0_24px_60px_rgba(0,0,0,0.22)] transition-transform duration-300">
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-violet-200">Brand</span>
+                            <span class="text-[11px] uppercase tracking-[0.3em] text-zinc-400">Identity</span>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-semibold text-white">Brand Strategy & Identity</h3>
+                        <p class="mt-4 text-sm leading-7 text-zinc-400">Crafting visual systems and narratives that make brands feel distinct, memorable, and consistent across every touchpoint.</p>
+                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+                            <li>• Visual systems & logo design</li>
+                            <li>• Typography, color, and iconography</li>
+                            <li>• Brand story, positioning, and tone</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card services-content rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl shadow-[0_24px_60px_rgba(0,0,0,0.22)] transition-transform duration-300">
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="rounded-full border border-orange-400/20 bg-orange-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-orange-200">Create</span>
+                            <span class="text-[11px] uppercase tracking-[0.3em] text-zinc-400">Design</span>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-semibold text-white">Creative Development</h3>
+                        <p class="mt-4 text-sm leading-7 text-zinc-400">Combining design thinking with frontend engineering to create interactive and engaging digital experiences.</p>
+                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+                            <li>• Landing Pages</li>
+                            <li>• Portfolio Websites</li>
+                            <li>• Accessible, mobile-first experiences</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card services-content rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl shadow-[0_24px_60px_rgba(0,0,0,0.22)] transition-transform duration-300">
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-violet-200">Build</span>
+                            <span class="text-[11px] uppercase tracking-[0.3em] text-zinc-400">Frontend</span>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-semibold text-white">Front-End Development</h3>
+                        <p class="mt-4 text-sm leading-7 text-zinc-400">Turning polished designs into fast, responsive websites with modern tools and a thoughtful performance-first approach.</p>
+                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+                            <li>• React, Tailwind & modern JS</li>
+                            <li>• Pixel-perfect responsive builds</li>
+                            <li>• Speed, SEO, and accessible markup</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card services-content rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl shadow-[0_24px_60px_rgba(0,0,0,0.22)] transition-transform duration-300">
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="rounded-full border border-orange-400/20 bg-orange-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-orange-200">INNOVATE</span>
+                            <span class="text-[11px] uppercase tracking-[0.3em] text-zinc-400">AI</span>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-semibold text-white">AI & Software Projects</h3>
+                        <p class="mt-4 text-sm leading-7 text-zinc-400">Leveraging Computer Science and AI to build intelligent software solutions that solve real-world problems.</p>
+                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+                            <li>• Digital Creative & AI Productivity Specialist</li>
+                            <li>• Problem Solving</li>
+                            <li>• Research Projects</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="relative mx-auto max-w-7xl scroll-mt-28 px-6 py-24 sm:px-8 lg:px-12">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="hero-grid absolute inset-0 opacity-20"></div>
+                <div class="absolute left-[-3rem] top-10 h-44 w-44 rounded-full bg-violet-600/12 blur-3xl"></div>
+                <div class="absolute bottom-10 right-[-2rem] h-56 w-56 rounded-full bg-orange-500/12 blur-3xl"></div>
+            </div>
+
+            <div class="relative">
+                <div class="max-w-3xl space-y-4">
+                    <p class="text-sm uppercase tracking-[0.35em] text-violet-400">Skills</p>
+                    <h2 class="text-4xl font-semibold leading-tight text-white sm:text-5xl" style="font-family: 'Space Grotesk', sans-serif;">My Toolkit</h2>
+                    <p class="max-w-2xl text-lg leading-8 text-zinc-400">I combine design, development, and Computer Science to create digital experiences that are both visually compelling and technically sound.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-6 lg:grid-cols-2">
+                    <article class="skills-card rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl" data-delay="0">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-[0.35em] text-zinc-500">DEVELOPMENT</p>
+                                <h3 class="mt-2 text-2xl font-semibold text-white">Frontend</h3>
+                            </div>
+                            <span class="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-violet-200">Craft</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7 text-zinc-400">Building elegant, responsive interfaces with clarity, performance, and thoughtful interaction.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">HTML5</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">CSS3</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">JavaScript</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Tailwind
+                                CSS</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Responsive
+                                Design</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Accessibility</span>
+                        </div>
+                        <div class="mt-8 border-t border-white/10 pt-4">
+                            <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-500">Growing</p>
+                        </div>
+                    </article>
+
+                    <article class="skills-card rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl" data-delay="140">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-[0.35em] text-zinc-500">ENGINEERING</p>
+                                <h3 class="mt-2 text-2xl font-semibold text-white">Programming</h3>
+                            </div>
+                            <span class="rounded-full border border-orange-400/20 bg-orange-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-orange-200">Logic</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7 text-zinc-400">Combining clean code, structured thinking, and dependable collaboration to deliver robust solutions.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Python</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Git</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">GitHub</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Problem
+                                Solving</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Software
+                                Fundamentals</span>
+                        </div>
+                        <div class="mt-8 border-t border-white/10 pt-4">
+                            <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-500">Projects</p>
+                        </div>
+                    </article>
+
+                    <article class="skills-card rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl" data-delay="280">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-[0.35em] text-zinc-500">CREATIVITY</p>
+                                <h3 class="mt-2 text-2xl font-semibold text-white">Design</h3>
+                            </div>
+                            <span class="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-violet-200">Visual</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7 text-zinc-400">Shaping visual systems with a premium sense of rhythm, balance, and brand storytelling.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">CorelDRAW</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Canva</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Photoshop</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Brand
+                                Identity</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Typography</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Visual
+                                Systems</span>
+                        </div>
+                        <div class="mt-8 border-t border-white/10 pt-4">
+                            <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-500">5+ Years</p>
+                        </div>
+                    </article>
+
+                    <article class="skills-card rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl" data-delay="420">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-[0.35em] text-zinc-500">INNOVATION</p>
+                                <h3 class="mt-2 text-2xl font-semibold text-white">AI & Computer Science</h3>
+                            </div>
+                            <span class="rounded-full border border-orange-400/20 bg-orange-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-orange-200">Explore</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7 text-zinc-400">Skilled in prompt engineering and AI-assisted workflows, using structured prompting, iterative refinement, and AI tools to accelerate creative, technical, research, and problem-solving tasks.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Artificial
+                                Intelligence</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Machine
+                                Learning</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Digital
+                                Creative & AI Productivity Specialist</span>
+                            <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Research</span>
+                        </div>
+                        <div class="mt-8 border-t border-white/10 pt-4">
+                            <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-500">Growing</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="skills-learning-card mt-6 rounded-[28px] border border-white/10 bg-[rgba(255,255,255,0.05)] p-7 backdrop-blur-xl" data-delay="560">
+                    <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+                        <div>
+                            <div class="inline-flex items-center gap-2 rounded-full border border-orange-400/20 bg-orange-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-orange-200">
+                                <span class="h-2 w-2 rounded-full bg-orange-400"></span> IN PROGRESS
+                            </div>
+                            <h3 class="mt-4 text-2xl font-semibold text-white">Currently Learning</h3>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">Deep
+                                    Learning</span>
+                                <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">TensorFlow</span>
+                                <span class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-200">PyTorch</span>
+                            </div>
+                        </div>
+                        <p class="max-w-md text-sm leading-7 text-zinc-400">Expanding into deeper AI systems and modern research-driven tooling to build smarter, more resilient digital products.</p>
+                    </div>
+                </div>
+
+                <div class="skills-marquee mt-8 overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(255,255,255,0.03)] p-3 backdrop-blur-xl">
+                    <div class="skills-marquee-track flex w-max items-center gap-3 py-2">
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">HTML5</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">CSS3</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">JavaScript</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">Tailwind
+                            CSS</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">Python</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">GitHub</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">CorelDRAW</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">Canva</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">Artificial
+                            Intelligence</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">Machine
+                            Learning</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">TensorFlow</span>
+                        <span class="whitespace-nowrap rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-400">PyTorch</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mx-auto max-w-7xl scroll-mt-28 px-6 py-24 sm:px-8 lg:px-12">
+            <div class="space-y-12">
+                <header class="max-w-3xl space-y-4">
+                    <p class="text-sm uppercase tracking-[0.35em] text-violet-400">Projects</p>
+                    <h2 class="text-4xl font-semibold leading-tight text-white sm:text-5xl" style="font-family: 'Space Grotesk', sans-serif;">Selected Work</h2>
+                    <p class="max-w-2xl text-lg leading-8 text-zinc-400">A collection of projects showcasing my ability to combine creativity, design, and software development into meaningful digital experiences.</p>
+                </header>
+
+                <div class="grid gap-6 md:grid-cols-2">
+                    <article class="project-card overflow-hidden rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl md:col-span-2">
+                        <div class="grid lg:grid-cols-[1.1fr_0.9fr]">
+                            <figure class="project-placeholder min-h-80 border-b border-white/10 bg-[rgba(124,58,237,0.12)] p-6 lg:min-h-full lg:border-b-0 lg:border-r">
+                                <a href="https://crop-disease-detection-system-7z9h.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="View the live crop disease detection project" class="ai-project-showcase group relative block h-full min-h-64 overflow-hidden rounded-[24px] border border-white/10 bg-black/20 shadow-[0_18px_45px_rgba(0,0,0,0.28)] transition duration-500 ease-out hover:shadow-[0_24px_55px_rgba(124,58,237,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#111111]">
+                                    <img src="./assets/projects/ai/preview.png" loading="lazy" alt="Crop disease detection application interface" class="ai-project-showcase__image h-full min-h-64 w-full max-w-full object-cover transition duration-500 ease-out group-hover:scale-[1.03]" />
+                                    <span class="ai-project-showcase__glow" aria-hidden="true"></span>
+                                    <span class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20 transition duration-500 ease-out group-hover:from-black/80 group-hover:via-black/25 group-hover:to-black/35" aria-hidden="true"></span>
+                                    <span class="ai-project-showcase__live absolute right-4 top-4 rounded-full border border-emerald-300/30 bg-emerald-500/15 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-emerald-100 backdrop-blur-xl">Live</span>
+                                    <span class="ai-project-showcase__external-link absolute right-4 top-14 inline-flex h-9 w-9 translate-y-2 items-center justify-center rounded-full border border-white/15 bg-black/30 text-white opacity-0 backdrop-blur-xl transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100"
+                                        aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="1.8" class="h-4 w-4">
+                                            <path
+                                                d="M14 5h5v5M19 5l-8 8M19 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></span>
+                                    <span class="absolute bottom-4 left-4 z-[2]">
+                                        <span
+                                            class="ai-project-showcase__title block translate-y-3 text-sm font-semibold text-white opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100">Crop
+                                            Disease Detection</span>
+                                    <span class="mt-1 block translate-y-2 text-sm font-semibold text-white opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100">View
+                                            Live Project &rarr;</span>
+                                    </span>
+                                </a>
+                            </figure>
+                            <div class="flex flex-col p-7 sm:p-8">
+                                <div class="flex flex-wrap items-center justify-between gap-3">
+                                    <span class="rounded-full border border-orange-400/20 bg-orange-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-orange-200">In
+                                        Progress</span>
+                                    <span class="text-[11px] uppercase tracking-[0.3em] text-zinc-400">Artificial
+                                        Intelligence</span>
+                                </div>
+                                <h3 class="mt-6 text-3xl font-semibold leading-tight text-white">AI-Based Multi-Disease Detection Model for Tuber Crops</h3>
+                                <p class="mt-4 text-sm leading-7 text-zinc-400">An AI-powered research project focused on detecting multiple diseases affecting tuber crops using deep learning and computer vision.</p>
+                                <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                                    <li class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-200">
+                                        Python</li>
+                                    <li class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-200">
+                                        TensorFlow</li>
+                                    <li class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-200">
+                                        Deep Learning</li>
+                                    <li class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-200">
+                                        Computer Vision</li>
+                                </ul>
+                                <span class="mt-8 inline-flex w-fit rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-zinc-400" aria-disabled="true">Case Study (Coming Soon)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl">
+                        <figure class="project-placeholder border-b border-white/10 bg-[rgba(249,115,22,0.08)] p-6" role="img" aria-label="Browser mockup placeholder for Portfolio Website">
+                            <div class="rounded-[18px] border border-white/10 bg-[#101010] p-3">
+                                <div class="flex gap-1.5 border-b border-white/10 pb-3"><span class="h-2.5 w-2.5 rounded-full bg-red-400/70"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-400/70"></span><span class="h-2.5 w-2.5 rounded-full bg-emerald-400/70"></span></div>
+                                <div class="mt-3 flex h-40 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/20 to-orange-500/10">
+                                    <span class="text-xs uppercase tracking-[0.3em] text-zinc-300">Browser mockup</span>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="p-7">
+                            <div class="flex items-center justify-between gap-3"><span class="rounded-full border border-emerald-400/20 bg-emerald-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-200">Live</span><span class="text-[11px] uppercase tracking-[0.3em] text-zinc-400">Frontend
+                                    Development</span></div>
+                            <h3 class="mt-5 text-2xl font-semibold text-white">Portfolio Website</h3>
+                            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies used">
+                                <li class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-200">
+                                    HTML</li>
+                                <li class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-200">
+                                    Tailwind CSS</li>
+                                <li class="skill-pill rounded-full border border-white/10 bg-white/8 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-200">
+                                    JavaScript</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project-card overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl">
+                        <div class="p-7">
+                            <div class="flex items-center justify-between gap-3"><span class="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-violet-200">Completed</span><span class="text-[11px] uppercase tracking-[0.3em] text-zinc-400">Branding</span></div>
+                            <h3 class="mt-5 text-2xl font-semibold text-white">Brand Identity Showcase</h3>
+                        </div>
+                        <figure class="project-gallery px-7 pb-7" data-branding-gallery aria-label="Brand identity project gallery">
+                            <div class="project-gallery__preview" data-branding-preview></div>
+                            <div data-branding-meta></div>
+                            <div class="mt-3 grid grid-cols-5 gap-2" data-branding-thumbnails></div>
+                        </figure>
+                    </article>
+
+                    <article class="project-card overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl">
+                        <div class="p-7">
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-violet-200">Featured</span>
+                                <span class="text-[11px] uppercase tracking-[0.3em] text-zinc-400">Creative
+                                    Design</span>
+                            </div>
+                            <h3 class="mt-5 text-2xl font-semibold text-white">Graphic Design Gallery</h3>
+                            <p class="mt-3 text-sm leading-7 text-zinc-400">A rotating showcase of graphic design work spanning flyers, posters, event banners, menus, and social content.</p>
+                        </div>
+                        <div class="px-7 pb-7" data-graphic-gallery></div>
+                    </article>
+                </div>
+
+                <aside class="rounded-[32px] border border-white/10 bg-[rgba(255,255,255,0.05)] p-8 text-center backdrop-blur-xl sm:p-10">
+                    <h2 class="text-3xl font-semibold text-white sm:text-4xl" style="font-family: 'Space Grotesk', sans-serif;">Have an idea worth building?</h2>
+                    <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-zinc-400">Whether it's a brand, website, or software solution, I'd love to help bring it to life.</p>
+                    <a href="#contact" class="mt-7 inline-flex rounded-full bg-gradient-to-r from-violet-600 to-orange-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300">Let's
+                        Talk <span aria-hidden="true">→</span></a>
+                </aside>
+            </div>
+        </section>
+
+        <section id="contact" class="mx-auto max-w-7xl scroll-mt-28 px-6 py-24 sm:px-8 lg:px-12">
+            <div class="relative overflow-hidden rounded-[36px] border border-white/10 bg-[rgba(8,8,8,0.78)] p-8 shadow-[0_30px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:p-10 lg:p-14">
+                <div class="absolute inset-0 overflow-hidden rounded-[36px]">
+                    <div class="contact-blob absolute -left-16 top-10 h-48 w-48 rounded-full bg-violet-600/20 blur-3xl">
+                    </div>
+                    <div class="contact-blob absolute bottom-[-3rem] right-[-2rem] h-64 w-64 rounded-full bg-orange-500/15 blur-3xl">
+                    </div>
+                </div>
+
+                <div class="relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+                    <div class="space-y-8">
+                        <div class="contact-pill inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium uppercase tracking-[0.3em] text-zinc-300 backdrop-blur-xl">
+                            <span class="inline-block h-2.5 w-2.5 rounded-full bg-emerald-400"></span> Contact
+                        </div>
+
+                        <div class="space-y-5">
+                            <h2 class="contact-title max-w-3xl text-4xl font-semibold leading-[0.95] text-white sm:text-5xl lg:text-7xl" style="font-family: 'Space Grotesk', sans-serif;">
+                                Let's Build Something Amazing Together
+                            </h2>
+                            <p class="contact-description max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
+                                I help brands, startups and businesses create memorable identities, premium websites and AI-powered digital experiences. <span class="mail-text">Click the Email button below to
+                                    start a conversation.</span>
+                            </p>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div class="contact-card rounded-[24px] border border-white/10 bg-white/8 p-5 backdrop-blur-xl">
+                                <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-500">Email</p>
+                                <a href="mailto:muizeajibola26@gmail.com" class="mt-3 block text-lg font-medium text-blue-500 transition hover:text-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070707]">
+                                    muizeajibola26@gmail.com
+                                </a>
+                            </div>
+
+                            <div class="contact-card rounded-[24px] border border-white/10 bg-white/8 p-5 backdrop-blur-xl">
+                                <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-500">Location</p>
+                                <p class="mt-3 text-lg font-medium text-white">Nigeria</p>
+                            </div>
+
+                            <div class="contact-card rounded-[24px] border border-white/10 bg-white/8 p-5 backdrop-blur-xl">
+                                <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-500">Availability</p>
+                                <p class="mt-3 text-lg font-medium text-white">Available for Freelance</p>
+                            </div>
+
+                            <div class="contact-card rounded-[24px] border border-white/10 bg-white/8 p-5 backdrop-blur-xl">
+                                <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-500">Response Time</p>
+                                <p class="mt-3 text-lg font-medium text-white">Usually within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5 ">
+                        <div class="contact-cta relative overflow-hidden rounded-[30px] border border-violet-400/25 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.24),transparent_44%),linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))] p-6 shadow-[0_20px_80px_rgba(124,58,237,0.18)] backdrop-blur-2xl sm:p-8">
+                            <div class="absolute inset-0 opacity-80">
+                                <div class="absolute -right-8 top-8 h-32 w-32 rounded-full bg-violet-500/20 blur-3xl">
+                                </div>
+                                <div class="absolute bottom-0 left-6 h-20 w-20 rounded-full bg-cyan-400/10 blur-2xl">
+                                </div>
+                            </div>
+
+                            <div class="relative space-y-6">
+                                <div class="space-y-2">
+                                    <p class="text-sm uppercase tracking-[0.3em] text-violet-200">Start a conversation
+                                    </p>
+                                    <p class="max-w-md text-lg leading-8 text-zinc-300">
+                                        Let’s turn your next idea into a polished digital experience that feels effortless and memorable.
+                                    </p>
+                                </div>
+
+                                <a href="https://wa.me/08149139964?text=Hi%20Ajibola%20%F0%9F%91%8B%0A%0AI%20came%20across%20your%20portfolio.%0A%0AI'd%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener noreferrer" class="contact-button group inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/10 bg-white/95 px-6 py-4 text-base font-semibold text-[#090909] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(124,58,237,0.26)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070707]"
+                                    aria-label="Chat on WhatsApp">
+                                    <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-violet-600/10 text-violet-700 transition-transform duration-300 group-hover:scale-110">
+                                        <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+                                            <path
+                                                d="M6.6 19.4L7.5 15.7C6.9 14.5 6.6 13.2 6.6 11.8C6.6 7.7 9.9 4.4 14 4.4C18.1 4.4 21.4 7.7 21.4 11.8C21.4 15.9 18.1 19.2 14 19.2C12.7 19.2 11.5 18.9 10.4 18.3L6.6 19.4Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="flex items-center gap-2">
+                                        Chat on WhatsApp
+                                        <span
+                                            class="inline-flex transition-transform duration-300 group-hover:translate-x-1"
+                                            aria-hidden="true">→</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
